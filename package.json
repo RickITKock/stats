@@ -1,0 +1,27 @@
+{
+  "name": "stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:build": "npx tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RickITKock/stats.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RickITKock/stats/issues"
+  },
+  "homepage": "https://github.com/RickITKock/stats#readme",
+  "dependencies": {
+    "@types/node": "^18.7.15",
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.19"
+  }
+}
