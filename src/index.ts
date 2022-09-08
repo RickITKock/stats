@@ -1,15 +1,10 @@
-import { CsvFileReader } from "./CSVFileReader";
+import { CsvFileReader } from "./CsvFileReader";
+import { MatchReader } from "./MatchReader";
+import { MatchResult } from "./MatchResult";
 
-const reader = new CsvFileReader("football.csv");
-reader.read();
-
+const reader = new MatchReader("football.csv");
 let manUnitedWins = 0;
-
-enum MatchResult {
-  homeWin = "H",
-  awayWin = "A",
-  draw = "D",
-}
+reader.read();
 
 for (let match of reader.data) {
   if (match[1] === "Man United" && match[5] === MatchResult.homeWin) {
@@ -19,4 +14,5 @@ for (let match of reader.data) {
   }
 }
 
-console.log(`Amount of times man united won:\t${manUnitedWins}`);
+// console.log(`Amount of times man united won:\t${manUnitedWins}`);
+console.log(reader);
