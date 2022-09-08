@@ -1,5 +1,6 @@
+// enum - enumeration
 export enum MatchResult {
-  homeWin = "H",
-  awayWin = "A",
-  draw = "D",
+  HomeWin = "H",
+  AwayWin = "A",
+  Draw = "D",
 }
