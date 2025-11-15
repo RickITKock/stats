@@ -4,12 +4,12 @@ exports.Summary = void 0;
 const WinsAnalysis_1 = require("./analyzers/WinsAnalysis");
 const HtmlReport_1 = require("./report-targets/HtmlReport");
 class Summary {
+    static winsAnalysisWithHtmlReport(team) {
+        return new Summary(new WinsAnalysis_1.WinsAnalysis(team), new HtmlReport_1.HtmlReport()); // TODO
+    }
     constructor(analyzer, outputTarget) {
         this.analyzer = analyzer;
         this.outputTarget = outputTarget;
-    }
-    static winsAnalysisWithHtmlReport(team) {
-        return new Summary(new WinsAnalysis_1.WinsAnalysis(team), new HtmlReport_1.HtmlReport()); // TODO
     }
     buildAndPrintReport(matches) {
         const output = this.analyzer.run(matches);
